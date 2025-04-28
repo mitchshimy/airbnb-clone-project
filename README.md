@@ -106,6 +106,60 @@ Identifying the design properties (such as color styles, typography, spacing, an
 Understanding the full design system early sets a strong foundation for efficient development and a seamless user experience.
 
 ---
+---
+
+## Project Roles and Responsibilities 🧑‍💻
+
+| Role                | Responsibilities                                                                                          |
+|---------------------|-----------------------------------------------------------------------------------------------------------|
+| Project Manager     | Oversees the entire project, ensures timelines are met, coordinates between teams, and resolves blockers. |
+| Frontend Developers | Develop the user interface with React, Next.js, and TailwindCSS. Implement UI components and frontend logic. |
+| Backend Developers  | Build APIs with Django and manage the database (MySQL). Handle authentication, data management, and server logic. |
+| Designers           | Create wireframes, prototypes, and visual assets. Ensure consistency with branding and user experience best practices. |
+| QA/Testers          | Test functionality, usability, and performance. Report bugs and verify fixes. Ensure overall software quality. |
+| DevOps Engineers    | Set up and manage deployment pipelines, servers, and cloud services. Monitor system reliability and performance. |
+| Product Owner       | Defines project vision, prioritizes features, and communicates the needs of the end-users to the team. |
+| Scrum Master        | Facilitates Agile/Scrum practices, removes impediments, leads daily stand-ups, and ensures smooth sprint execution. |
+
+Each role is critical to delivering a high-quality, functional, and scalable Airbnb clone, with strong collaboration between all team members.
+
+---
+
+## UI Component Patterns 🧩
+
+Below are the UI components planned for the project:
+
+- **Navbar**
+  - Contains logo, search bar, navigation links (Explore, Login/Signup, etc.), and a responsive menu.
+  - Stays fixed at the top for easy access.
+
+- **Property Card**
+  - Displays a brief overview of a property: image, title, price, rating, and location.
+  - Clickable to view detailed property information.
+
+- **Footer**
+  - Includes links to informational pages (About, Careers, Help Center).
+  - Displays copyright.
+  - Contains social media links and contact information.
+
+- **Search Filter Bar**
+  - Allows users to filter property listings based on location, price range, dates, and more.
+
+- **Booking Form**
+  - Enables users to select dates, number of guests, and initiate the checkout process.
+
+- **User Authentication Forms**
+  - Login and signup forms with validation and error handling.
+
+- **Property Details View**
+  - Full-page view with high-resolution images, amenities list, host information, and booking call-to-action.
+
+- **Modal Components**
+  - Used for pop-ups like login, signup, booking confirmation, and alerts.
+
+Each component will be built with reusability, accessibility, and responsiveness in mind, following clean UI/UX design principles.
+
+---
 
 
 Stay tuned for updates and progress on this exciting project! 🚀
