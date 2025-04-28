@@ -72,6 +72,39 @@ A user-friendly design is critical in a booking system to:
 
 A smooth and thoughtful UI/UX can significantly impact the success of a platform like Airbnb.
 
+### Color Styles 🎨
+- **Primary Color:** #FF385C (Pinkish Red — main action color)
+- **Secondary Color:** #717171 (Neutral Gray — for text and icons)
+- **Background Color:** #FFFFFF (White — background)
+- **Accent Color:** #008489 (Teal — highlights and secondary buttons)
+- **Border Color:** #EBEBEB (Light Gray — dividers and card borders)
+
+### Typography 🖋️
+- **Font Family:** 'Inter', 'Helvetica Neue', Arial, sans-serif
+- **Font Weights:**
+  - Light: 300
+  - Regular: 400
+  - Semi-Bold: 600
+  - Bold: 700
+- **Font Sizes:**
+  - Heading 1 (H1): 32px
+  - Heading 2 (H2): 24px
+  - Heading 3 (H3): 20px
+  - Body Text: 16px
+  - Small Text: 14px
+
+---
+
+### Importance of Identifying Design Properties of a Mockup Design 🎯
+Identifying the design properties (such as color styles, typography, spacing, and component layout) in a mockup is critical because:
+- **Consistency:** Ensures the app looks polished and uniform across all pages and components.
+- **Development Speed:** Provides a clear reference for developers, minimizing guesswork and rework.
+- **Responsiveness:** Knowing spacing and font sizes upfront helps plan responsive layouts for different devices.
+- **Accessibility:** Thoughtful use of colors, fonts, and contrasts supports usability for all users, including those with disabilities.
+- **Brand Identity:** Maintains a strong and recognizable brand through consistent visual elements.
+
+Understanding the full design system early sets a strong foundation for efficient development and a seamless user experience.
+
 ---
 
 
