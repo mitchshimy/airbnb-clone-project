@@ -15,7 +15,7 @@ Key features to be implemented:
 
 ---
 
-## Technologies Used 💻
+## Technologies Stack
 Introduction to the tech stack:
 
 - **Frontend:**  
@@ -24,16 +24,14 @@ Introduction to the tech stack:
   - TailwindCSS (for styling)
 
 - **Backend:**  
-  | Technology | Purpose |
-|------------|---------|
-| **Django** | A high-level Python web framework used to build the RESTful API backend. |
-| **Django REST Framework** | Toolkit to simplify the creation and management of RESTful APIs in Django. |
-| **PostgreSQL** | A powerful, open-source relational database for storing structured data securely and efficiently. |
-| **GraphQL** | Enables flexible and efficient data querying by allowing clients to request exactly the data they need. |
-| **Celery** | Handles asynchronous tasks such as sending emails, processing payments, and background job queues. |
-| **Redis** | Used for caching, session management, and speeding up database queries by storing frequently accessed data in memory. |
-| **Docker** | Ensures consistent development and deployment environments through containerization. |
-| **CI/CD Pipelines** | Automates testing, building, and deployment processes to ensure faster and more reliable code delivery. |
+- **Django**: A high-level Python web framework used to build the RESTful API backend.
+- **Django REST Framework**: Toolkit to simplify the creation and management of RESTful APIs in Django.
+- **PostgreSQL**: A powerful, open-source relational database for storing structured data securely and efficiently.
+- **GraphQL**: Enables flexible and efficient data querying by allowing clients to request exactly the data they need.
+- **Celery**: Handles asynchronous tasks such as sending emails, processing payments, and background job queues.
+- **Redis**: Used for caching, session management, and speeding up database queries by storing frequently accessed data in memory.
+- **Docker**: Ensures consistent development and deployment environments through containerization.
+- **CI/CD Pipelines**: Automates testing, building, and deployment processes to ensure faster and more reliable code delivery.
 
 - **Other Tools:**  
   - Redux or Context API for state management  
@@ -178,6 +176,141 @@ Below are the UI components planned for the project:
 Each component will be built with reusability, accessibility, and responsiveness in mind, following clean UI/UX design principles.
 
 ---
+---
+
+## 🗃️ Database Design
+
+### Key Entities
+
+1. **Users**
+   - **id** (Primary Key): Unique identifier for the user.
+   - **email**: User’s email address.
+   - **password_hash**: A hashed version of the user’s password for authentication.
+   - **role**: Defines whether the user is an admin, property owner, or customer.
+   - **created_at**: Timestamp of when the user was created.
+
+   *Relation*: A user can have multiple properties and bookings.
+
+2. **Properties**
+   - **id** (Primary Key): Unique identifier for the property.
+   - **user_id** (Foreign Key): Links to the user who owns the property.
+   - **location**: Location of the property.
+   - **price_per_night**: Price per night for booking.
+   - **availability**: Boolean value indicating whether the property is available for booking.
+
+   *Relation*: Each property belongs to a user. A booking is linked to a property.
+
+3. **Bookings**
+   - **id** (Primary Key): Unique identifier for the booking.
+   - **user_id** (Foreign Key): Links to the user who made the booking.
+   - **property_id** (Foreign Key): Links to the property being booked.
+   - **check_in_date**: Date when the booking starts.
+   - **check_out_date**: Date when the booking ends.
+   - **total_price**: Total cost of the booking for the user.
+
+   *Relation*: A booking belongs to one user and one property.
+
+4. **Reviews**
+   - **id** (Primary Key): Unique identifier for the review.
+   - **user_id** (Foreign Key): Links to the user who wrote the review.
+   - **property_id** (Foreign Key): Links to the property being reviewed.
+   - **rating**: Rating given by the user (1 to 5 stars).
+   - **comment**: Text feedback provided by the user.
+
+   *Relation*: A review belongs to one user and one property.
+
+5. **Payments**
+   - **id** (Primary Key): Unique identifier for the payment.
+   - **user_id** (Foreign Key): Links to the user who made the payment.
+   - **booking_id** (Foreign Key): Links to the booking for which payment was made.
+   - **amount**: Total amount paid.
+   - **payment_date**: Date when the payment was processed.
+
+   *Relation*: A payment is linked to one booking and one user.
+---
+
+## 📝 Feature Breakdown
+
+### 1. **User Management**
+   The user management feature ensures a secure registration, authentication, and profile management system for users. It allows users to create accounts, log in, and manage their profiles securely, enabling a personalized experience on the platform.
+
+### 2. **Property Management**
+   The property management system allows users to list, update, retrieve, and delete their properties. Hosts can easily manage their property details such as location, price, and availability, ensuring the information is up-to-date for potential guests.
+
+### 3. **Booking System**
+   The booking system enables users to reserve properties by providing check-in and check-out details, as well as payment information. This feature handles all the interactions involved in making and managing bookings, ensuring a seamless booking experience for both hosts and guests.
+
+### 4. **Payment Processing**
+   The payment processing system allows users to make payments for bookings. It integrates a secure payment gateway that processes transactions, ensuring that guests can pay for their reservations, and hosts receive their due payments.
+
+### 5. **Review System**
+   The review system allows users to post feedback and rate properties after their stay. This feature helps build trust and transparency by letting future guests read the experiences of others, which influences their booking decisions.
+
+### 6. **Database Optimizations**
+   To enhance the performance of the system, the backend implements indexing and caching strategies. This ensures that frequently accessed data, such as property listings and bookings, is retrieved quickly, providing a smooth user experience even with a large dataset.
+
+---
+
+## 🔒 API Security
+
+### Key Security Measures
+
+1. **Authentication**
+   - Authentication ensures that only legitimate users can access the backend services. We will implement **JWT (JSON Web Tokens)** or **OAuth2** for user authentication, which securely identifies users based on credentials.
+   - **Importance**: This is crucial for protecting user data and ensuring that sensitive actions, such as creating bookings or managing properties, can only be performed by authenticated users.
+
+2. **Authorization**
+   - Authorization verifies that authenticated users have the appropriate permissions to access specific resources or perform certain actions. Role-based access control (RBAC) will be used to ensure only authorized users can access or modify sensitive data, such as booking details or property management.
+   - **Importance**: This protects against unauthorized access and ensures that users can only interact with their own data or the data they have explicit permission to manage.
+
+3. **Rate Limiting**
+   - To prevent abuse and mitigate DDoS (Distributed Denial-of-Service) attacks, we will implement **rate limiting** on API endpoints. This ensures that users or malicious actors cannot overwhelm the system with excessive requests.
+   - **Importance**: This helps protect the backend infrastructure and ensures that the platform remains stable even under high traffic or malicious attack.
+
+4. **Data Encryption**
+   - All sensitive data, including passwords, payment information, and personal user details, will be encrypted both at rest (in the database) and in transit (using HTTPS/SSL).
+   - **Importance**: Encryption ensures that user data is kept secure and private, safeguarding against potential data breaches.
+
+5. **Input Validation & Sanitization**
+   - Input validation and sanitization will be enforced across all endpoints to prevent common security vulnerabilities like SQL injection, XSS (Cross-site Scripting), and CSRF (Cross-Site Request Forgery).
+   - **Importance**: This is essential to prevent malicious actors from exploiting the API and injecting harmful code or SQL queries that could compromise the system.
+
+6. **API Access Logs**
+   - We will maintain comprehensive API access logs, recording who accessed which endpoints and when, as well as any failed authentication attempts.
+   - **Importance**: These logs provide traceability, helping to detect and investigate any suspicious activity or security breaches.
+
+---
+
+These security measures are essential to protect the integrity of the system, safeguard user data, and ensure that all transactions, including bookings and payments, are secure and reliable.
+
+## ⚙️ CI/CD Pipeline
+
+### What is CI/CD?
+
+**CI (Continuous Integration)** and **CD (Continuous Deployment/Delivery)** are practices that allow for automating and streamlining the development process. CI ensures that code changes are integrated into the main branch frequently, typically multiple times a day, and that they are automatically tested. CD further extends this by automating the deployment of code to production environments or staging, ensuring faster and more reliable delivery.
+
+### Why CI/CD is Important for the Project?
+
+1. **Automation**: CI/CD automates testing, building, and deployment, which reduces the manual effort required to maintain the project. This ensures that developers can focus on writing code rather than worrying about the deployment process.
+
+2. **Faster Development Cycle**: CI/CD pipelines enable rapid development by automatically running tests and deploying code changes as soon as they are committed. This speeds up the delivery of features, bug fixes, and updates.
+
+3. **Improved Quality**: Automated testing in CI ensures that the code is continuously checked for errors, which reduces the chances of bugs making it to production. This improves the overall stability of the application.
+
+4. **Consistency**: Automated deployments ensure that the code is consistently deployed in the same environment, reducing the chances of discrepancies between development, testing, and production environments.
+
+5. **Feedback Loop**: Developers receive immediate feedback on their changes, allowing them to address issues quickly and improve the code continuously.
+
+### Tools for CI/CD
+
+- **GitHub Actions**: A powerful CI/CD tool integrated with GitHub that allows you to automate workflows for testing, building, and deploying your code.
+- **Docker**: A containerization tool that can be used in CI/CD pipelines to ensure consistent environments across development, testing, and production stages.
+- **Jenkins**: A widely used open-source automation server for building and deploying code in CI/CD pipelines.
+- **CircleCI**: Another popular CI/CD tool for automating workflows and ensuring fast deployments.
+- **Travis CI**: A cloud-based CI/CD tool that integrates well with GitHub repositories for automated builds and tests.
+
+
+
 
 
 Stay tuned for updates and progress on this exciting project! 🚀
