@@ -24,9 +24,16 @@ Introduction to the tech stack:
   - TailwindCSS (for styling)
 
 - **Backend:**  
-  - Python and Django  
-  - MySQL database  
-  *(Note: Backend is primarily for illustration; the main focus is frontend development.)*
+  | Technology | Purpose |
+|------------|---------|
+| **Django** | A high-level Python web framework used to build the RESTful API backend. |
+| **Django REST Framework** | Toolkit to simplify the creation and management of RESTful APIs in Django. |
+| **PostgreSQL** | A powerful, open-source relational database for storing structured data securely and efficiently. |
+| **GraphQL** | Enables flexible and efficient data querying by allowing clients to request exactly the data they need. |
+| **Celery** | Handles asynchronous tasks such as sending emails, processing payments, and background job queues. |
+| **Redis** | Used for caching, session management, and speeding up database queries by storing frequently accessed data in memory. |
+| **Docker** | Ensures consistent development and deployment environments through containerization. |
+| **CI/CD Pipelines** | Automates testing, building, and deployment processes to ensure faster and more reliable code delivery. |
 
 - **Other Tools:**  
   - Redux or Context API for state management  
@@ -109,6 +116,7 @@ Understanding the full design system early sets a strong foundation for efficien
 ---
 
 ## Project Roles and Responsibilities 🧑‍💻
+### 👥 Team Roles (Frontend Focus)
 
 | Role                | Responsibilities                                                                                          |
 |---------------------|-----------------------------------------------------------------------------------------------------------|
@@ -120,6 +128,16 @@ Understanding the full design system early sets a strong foundation for efficien
 | DevOps Engineers    | Set up and manage deployment pipelines, servers, and cloud services. Monitor system reliability and performance. |
 | Product Owner       | Defines project vision, prioritizes features, and communicates the needs of the end-users to the team. |
 | Scrum Master        | Facilitates Agile/Scrum practices, removes impediments, leads daily stand-ups, and ensures smooth sprint execution. |
+
+### 👥 Team Roles (Backend Focus)
+
+| Role | Description and Responsibility |
+|------|---------------------------------|
+| **Backend Developer** | Responsible for implementing API endpoints, designing database schemas, integrating business logic, and ensuring security best practices are followed. |
+| **Database Administrator (DBA)** | Designs, manages, and optimizes the PostgreSQL database. Ensures data security, indexing, backup, and disaster recovery. |
+| **DevOps Engineer** | Handles backend deployment pipelines, configures Docker environments, monitors server health, scales backend services, and ensures high availability. |
+| **QA Engineer** | Tests backend services, API endpoints, and database operations. Ensures that backend functionalities are reliable, performant, and meet the project’s quality standards. |
+
 
 Each role is critical to delivering a high-quality, functional, and scalable Airbnb clone, with strong collaboration between all team members.
 
