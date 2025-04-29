@@ -5,7 +5,7 @@ This project is a full-stack Airbnb clone designed to replicate the core functio
 
 ---
 
-## Features Overview 🛠️
+## Features Overview
 Key features to be implemented:
 - **Property Listings:** Display properties with relevant details and images.
 - **Booking System:** Allow users to book properties, view booking details, and manage their bookings.
@@ -42,7 +42,7 @@ Introduction to the tech stack:
 
 ---
 
-## UI/UX Design Planning 🎨
+## UI/UX Design Planning
 
 ### Design Goals
 - Create a clean, modern, and intuitive interface.
@@ -77,14 +77,14 @@ A user-friendly design is critical in a booking system to:
 
 A smooth and thoughtful UI/UX can significantly impact the success of a platform like Airbnb.
 
-### Color Styles 🎨
+### Color Styles
 - **Primary Color:** #FF385C (Pinkish Red — main action color)
 - **Secondary Color:** #717171 (Neutral Gray — for text and icons)
 - **Background Color:** #FFFFFF (White — background)
 - **Accent Color:** #008489 (Teal — highlights and secondary buttons)
 - **Border Color:** #EBEBEB (Light Gray — dividers and card borders)
 
-### Typography 🖋️
+### Typography
 - **Font Family:** 'Inter', 'Helvetica Neue', Arial, sans-serif
 - **Font Weights:**
   - Light: 300
@@ -100,7 +100,7 @@ A smooth and thoughtful UI/UX can significantly impact the success of a platform
 
 ---
 
-### Importance of Identifying Design Properties of a Mockup Design 🎯
+### Importance of Identifying Design Properties of a Mockup Design
 Identifying the design properties (such as color styles, typography, spacing, and component layout) in a mockup is critical because:
 - **Consistency:** Ensures the app looks polished and uniform across all pages and components.
 - **Development Speed:** Provides a clear reference for developers, minimizing guesswork and rework.
@@ -113,7 +113,7 @@ Understanding the full design system early sets a strong foundation for efficien
 ---
 ---
 
-## Project Roles and Responsibilities 🧑‍💻
+## Project Roles and Responsibilities
 ### 👥 Team Roles (Frontend Focus)
 
 | Role                | Responsibilities                                                                                          |
@@ -127,7 +127,7 @@ Understanding the full design system early sets a strong foundation for efficien
 | Product Owner       | Defines project vision, prioritizes features, and communicates the needs of the end-users to the team. |
 | Scrum Master        | Facilitates Agile/Scrum practices, removes impediments, leads daily stand-ups, and ensures smooth sprint execution. |
 
-### 👥 Team Roles (Backend Focus)
+### Team Roles (Backend Focus)
 
 | Role | Description and Responsibility |
 |------|---------------------------------|
@@ -141,7 +141,7 @@ Each role is critical to delivering a high-quality, functional, and scalable Air
 
 ---
 
-## UI Component Patterns 🧩
+## UI Component Patterns
 
 Below are the UI components planned for the project:
 
@@ -178,7 +178,7 @@ Each component will be built with reusability, accessibility, and responsiveness
 ---
 ---
 
-## 🗃️ Database Design
+## Database Design
 
 ### Key Entities
 
@@ -229,7 +229,7 @@ Each component will be built with reusability, accessibility, and responsiveness
    *Relation*: A payment is linked to one booking and one user.
 ---
 
-## 📝 Feature Breakdown
+## Feature Breakdown
 
 ### 1. **User Management**
    The user management feature ensures a secure registration, authentication, and profile management system for users. It allows users to create accounts, log in, and manage their profiles securely, enabling a personalized experience on the platform.
@@ -251,7 +251,7 @@ Each component will be built with reusability, accessibility, and responsiveness
 
 ---
 
-## 🔒 API Security
+## API Security
 
 ### Key Security Measures
 
@@ -283,7 +283,7 @@ Each component will be built with reusability, accessibility, and responsiveness
 
 These security measures are essential to protect the integrity of the system, safeguard user data, and ensure that all transactions, including bookings and payments, are secure and reliable.
 
-## ⚙️ CI/CD Pipeline
+## CI/CD Pipeline
 
 ### What is CI/CD?
 
@@ -313,4 +313,4 @@ These security measures are essential to protect the integrity of the system, sa
 
 
 
-Stay tuned for updates and progress on this exciting project! 🚀
+Stay tuned for updates and progress on this exciting project!
