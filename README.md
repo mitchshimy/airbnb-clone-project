@@ -40,7 +40,6 @@ Introduction to the tech stack:
 
 ---
 
----
 
 ## UI/UX Design Planning
 
@@ -111,12 +110,11 @@ Identifying the design properties (such as color styles, typography, spacing, an
 Understanding the full design system early sets a strong foundation for efficient development and a seamless user experience.
 
 ---
----
 
 ## Project Roles and Responsibilities
 ### 👥 Team Roles (Frontend Focus)
 
-| Role                | Responsibilities                                                                                          |
+| Role| Responsibilities |
 |---------------------|-----------------------------------------------------------------------------------------------------------|
 | Project Manager     | Oversees the entire project, ensures timelines are met, coordinates between teams, and resolves blockers. |
 | Frontend Developers | Develop the user interface with React, Next.js, and TailwindCSS. Implement UI components and frontend logic. |
